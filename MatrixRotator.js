@@ -20,21 +20,21 @@ module.exports = class MatrixRotator {
   rotate (direction) {
     // do work here
     console.log('the matrix ', this.matrix)
-    console.log('the directions ', direction)
+    // console.log('the directions ', direction)
     
     //It should take first number of every array and push into new arr
     //It should take new array and save it as original matrix array
 
     let newArr = [];
-    let newMatrix = [];
+    let newMatrix = [[], [], [], [], []];
     if(direction === 'ClockWise') {
       for(let i = this.matrix.length-1; i > 0; i--) {
-        newArr.push(matrix[i][0]);
+        newMatrix[i].push(matrix[i][0]);
       }
-      newMatrix.push(newArr);
-      newArr = [];
+      // newMatrix.push(newArr);
+      // newArr = [];
     }
-    console.log('new array ', newArr);
+    // console.log('new array ', newArr);
     console.log('newMatrix ', newMatrix)
     
     // must be a valid Direction, see Direction.js
